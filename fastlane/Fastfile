@@ -26,6 +26,7 @@ platform :ios do
     xcov(
       scheme: xcov_scheme,
       output_directory: "xcov",
+      json_results: true,
       derived_data_path: "derived_data"
     )
   end
