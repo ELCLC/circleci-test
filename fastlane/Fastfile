@@ -8,7 +8,26 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    scan
+    scan(
+      output_types: 'junit,html',
+      scheme: "Project1",
+      output_directory: "scan",
+      buildlog_path: "logs",
+      code_coverage: true,
+      derived_data_path: "derived_data"
+    )
+  end
+
+  desc "Runs Code Coverage"
+  lane :coverage do
+    # Add targets here as you create internal frameworks
+    xcov_scheme = "Project1"
+
+    xcov(
+      scheme: xcov_scheme,
+      output_directory: "xcov",
+      derived_data_path: "derived_data"
+    )
   end
 
   desc "Ad-hoc build"
