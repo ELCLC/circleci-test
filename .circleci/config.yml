@@ -25,6 +25,8 @@ jobs:
           path: xcov
       - store_test_results:
           path: scan
+      - store_test_results:
+          path: xcov
   adhoc:
     macos:
       xcode: "10.2.0"
