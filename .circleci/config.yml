@@ -20,9 +20,11 @@ jobs:
           command: |
             bundle exec fastlane coverage
       - store_artifacts:
-          path: output
+          path: scan
+      - store_artifacts:
+          path: xcov
       - store_test_results:
-          path: output/scan
+          path: scan
   adhoc:
     macos:
       xcode: "10.2.0"
