@@ -1,7 +1,7 @@
 jobs:
   build:
     macos:
-      xcode: "9.3.0"
+      xcode: "10.2.1"
     steps:
       - run:
           name: Run tests
