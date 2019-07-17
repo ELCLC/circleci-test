@@ -21,7 +21,7 @@ jobs:
       - store_test_results:
           path: output/scan
       - codecov/upload:
-          file:
+          file: output/scan
   adhoc:
     macos:
       xcode: "10.2.0"
